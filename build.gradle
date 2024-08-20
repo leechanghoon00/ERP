@@ -9,12 +9,12 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(18)
 	}
 }
 
 repositories {
-	mavenCentral()
+	mavenCentral() //공개된 사이트
 }
 
 dependencies {
