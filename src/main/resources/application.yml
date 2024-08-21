@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ERP
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/ERP?serverTimezone=UTC&characterEncoding=UTF-8
+    username: erpuser
+    password: 1234
