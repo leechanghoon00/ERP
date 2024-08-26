@@ -1,4 +1,4 @@
-package ERP.ERP;
+package com.spring.erp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
