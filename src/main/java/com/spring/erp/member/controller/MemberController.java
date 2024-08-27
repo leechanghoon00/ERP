@@ -17,11 +17,14 @@ public class MemberController {
     }
 
 
-    @PostMapping("/add")
+    @PostMapping("/api/add")
     //TODO: Restful api 방식에대해서 공부가 필요 공부후 필요한 api로 적용 할것
     public MemberEntity addMember(@RequestBody MemberDTO memberDTO){
         return memberService.addMember(memberDTO);
     }
+
+
+
 
 //    //회원 수정
 //    @PatchMapping("/editMember")

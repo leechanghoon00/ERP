@@ -10,9 +10,10 @@ public interface MemberService {
     //중복 ID 체크
 
     //회원 가입
-    MemberEntity addMember(MemberDTO memberDTO) ;
+    void addMember(MemberDTO memberDTO) ;
 
-    //회원 수정
+    //todo : 회원 수정
+
 
     //회원 탈퇴
 

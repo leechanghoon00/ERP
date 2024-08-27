@@ -23,21 +23,40 @@ public class MemberDTO {
     private String coDeuserNm;
 
     // DTO를 Entity로 변환하는 메서드
-    public MemberEntity toEntity(MemberDTO memberDTO) {
+//    public MemberEntity toEntity(MemberDTO memberDTO) {
+//        MemberEntity member = new MemberEntity();
+//        member.setCoId(memberDTO.getCoId());
+//        member.setCoPwd(memberDTO.getCoPwd());
+//        member.setCoName(memberDTO.getCoName());
+//        member.setCoEmail(memberDTO.getCoEmail());
+//        member.setCoAddress(memberDTO.getCoAddress());
+//        member.setCoJoinDate(memberDTO.getCoJoinDate());
+//        member.setCoPhone(memberDTO.getCoPhone());
+//        member.setCoPosiCd(memberDTO.getCoPosiCd());
+//        member.setCoUserCd(memberDTO.getCoUserCd());
+//        member.setCoDeparCd(memberDTO.getCoDeparCd());
+//        member.setCoDeuserCd(memberDTO.getCoDeuserCd());
+//        member.setCoUserNm(memberDTO.getCoUserNm());
+//        member.setCoDeuserNm(memberDTO.getCoDeuserNm());
+//        return member;
+//    }
+    // DTO를 Entity로 변환하는 메서드
+    public MemberEntity toEntity() {
         MemberEntity member = new MemberEntity();
-        member.setCoId(memberDTO.getCoId());
-        member.setCoPwd(memberDTO.getCoPwd()); // 이후 암호화 예정
-        member.setCoName(memberDTO.getCoName());
-        member.setCoEmail(memberDTO.getCoEmail());
-        member.setCoAddress(memberDTO.getCoAddress());
-        member.setCoJoinDate(memberDTO.getCoJoinDate());
-        member.setCoPhone(memberDTO.getCoPhone());
-        member.setCoPosiCd(memberDTO.getCoPosiCd());
-        member.setCoUserCd(memberDTO.getCoUserCd());
-        member.setCoDeparCd(memberDTO.getCoDeparCd());
-        member.setCoDeuserCd(memberDTO.getCoDeuserCd());
-        member.setCoUserNm(memberDTO.getCoUserNm());
-        member.setCoDeuserNm(memberDTO.getCoDeuserNm());
+        member.setCoId(this.coId);
+        member.setCoPwd(this.coPwd);
+        member.setCoName(this.coName);
+        member.setCoEmail(this.coEmail);
+        member.setCoAddress(this.coAddress);
+        member.setCoJoinDate(this.coJoinDate);
+        member.setCoPhone(this.coPhone);
+        member.setCoPosiCd(this.coPosiCd);
+        member.setCoUserCd(this.coUserCd);
+        member.setCoDeparCd(this.coDeparCd);
+        member.setCoDeuserCd(this.coDeuserCd);
+        member.setCoUserNm(this.coUserNm);
+        member.setCoDeuserNm(this.coDeuserNm);
+
         return member;
     }
 }
