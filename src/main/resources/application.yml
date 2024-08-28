@@ -6,3 +6,22 @@ spring:
     url: jdbc:mysql://localhost:3306/ERP?serverTimezone=UTC&characterEncoding=UTF-8
     username: erpuser
     password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#JDBC 연결해야하는 설정이있음 현재 그부분이 없어서 실행안되는것 같음
+# 저기 그어진곳 보고 한번 찾아보면될것같음
+#드라이버가 없다고 보면될거같다
+#https://velog.io/@minbo2002/JPA-application.yml-%EC%84%A4%EC%A0%95
+#해당링크 참조
+#*참고 : MySQL8.0.31 버전이상부터는 runtimeOnly 'com.mysql:mysql-connector-java' 가 아닌 runtimeOnly 'com.mysql:mysql-connector-j' 사용
+#ㅋ
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      dialect: org.hibernate.dialect.MySQL8InnoDBDialect

@@ -1,6 +1,6 @@
 package com.spring.erp.member.dto;
 
-import com.spring.erp.member.Entity.MemberEntity;
+import com.spring.erp.member.entity.MemberEntity;
 import lombok.Data;
 
 
@@ -22,24 +22,6 @@ public class MemberDTO {
     private String coUserNm;
     private String coDeuserNm;
 
-    // DTO를 Entity로 변환하는 메서드
-//    public MemberEntity toEntity(MemberDTO memberDTO) {
-//        MemberEntity member = new MemberEntity();
-//        member.setCoId(memberDTO.getCoId());
-//        member.setCoPwd(memberDTO.getCoPwd());
-//        member.setCoName(memberDTO.getCoName());
-//        member.setCoEmail(memberDTO.getCoEmail());
-//        member.setCoAddress(memberDTO.getCoAddress());
-//        member.setCoJoinDate(memberDTO.getCoJoinDate());
-//        member.setCoPhone(memberDTO.getCoPhone());
-//        member.setCoPosiCd(memberDTO.getCoPosiCd());
-//        member.setCoUserCd(memberDTO.getCoUserCd());
-//        member.setCoDeparCd(memberDTO.getCoDeparCd());
-//        member.setCoDeuserCd(memberDTO.getCoDeuserCd());
-//        member.setCoUserNm(memberDTO.getCoUserNm());
-//        member.setCoDeuserNm(memberDTO.getCoDeuserNm());
-//        return member;
-//    }
     // DTO를 Entity로 변환하는 메서드
     public MemberEntity toEntity() {
         MemberEntity member = new MemberEntity();

@@ -1,6 +1,5 @@
 package com.spring.erp.member.controller;
 
-import com.spring.erp.member.Entity.MemberEntity;
 import com.spring.erp.member.dto.MemberDTO;
 import com.spring.erp.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +18,9 @@ public class MemberController {
 
     @PostMapping("/api/add")
     //TODO: Restful api 방식에대해서 공부가 필요 공부후 필요한 api로 적용 할것
-    public MemberEntity addMember(@RequestBody MemberDTO memberDTO){
-        return memberService.addMember(memberDTO);
+    public void addMember(@RequestBody MemberDTO memberDTO) {
+        memberService.addMember(memberDTO);
     }
-
-
 
 
 //    //회원 수정
