@@ -1,6 +1,5 @@
-package com.spring.erp.member.Entity;
+package com.spring.erp.member.entity;
 
-import com.spring.erp.member.dto.MemberDTO;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,11 +7,13 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(
+        name = "member",  // 테이블 이름을 지정
+        uniqueConstraints = {
+                @UniqueConstraint(name = "UNIQUE_co_PHONE", columnNames = {"coPhone"})
+        }
+)
 public class MemberEntity {
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long coSeq;
 
     @Id
     private String coId; //아이디

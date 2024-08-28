@@ -1,8 +1,6 @@
 package com.spring.erp.member.config;
 
 
-import com.spring.erp.member.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
@@ -10,20 +8,19 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.stereotype.Service;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
-    private final MemberDetailsService MemberDetailsService;
+    private final MemberDetailsService memberDetailsService;
 
     public SecurityConfig(@Lazy MemberDetailsService memberDetailsService) {
-        MemberDetailsService = memberDetailsService;
+        this.memberDetailsService = memberDetailsService;
     }
+
 
     // 특정 HTTP요청에 대한 웹 기반 보안 구성
     @Bean
@@ -58,7 +55,7 @@ public class SecurityConfig {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
 
 
-        daoAuthenticationProvider.setUserDetailsService((MemberDetailsService)); // 사용자 세부 정보를 제공하는 'UserDetailsService'를 설정,여기에 주입할 실제 구현체('')가 필요함 데이터 베이스 조회를 담당하는 서비스 구현체
+        daoAuthenticationProvider.setUserDetailsService((memberDetailsService)); // 사용자 세부 정보를 제공하는 'UserDetailsService'를 설정,여기에 주입할 실제 구현체('')가 필요함 데이터 베이스 조회를 담당하는 서비스 구현체
         daoAuthenticationProvider.setPasswordEncoder(bCryptPasswordEncoder()); // 비밀번호를 인코딩할 'PasswordEncoder' 설정
 
         return daoAuthenticationProvider;

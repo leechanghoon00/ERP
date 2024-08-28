@@ -1,6 +1,6 @@
 package com.spring.erp.member.config;
 
-import com.spring.erp.member.Entity.MemberEntity;
+import com.spring.erp.member.entity.MemberEntity;
 import com.spring.erp.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

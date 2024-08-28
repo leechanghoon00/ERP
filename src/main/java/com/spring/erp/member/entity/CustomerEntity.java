@@ -1,12 +1,21 @@
-package com.spring.erp.member.dto;
+package com.spring.erp.member.entity;
 
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.sql.Date;
-
-@Data
-public class CustomerDTO {
-
+@Getter
+@Setter
+@Entity
+@Table(
+        name = "customer",  // 테이블 이름을 지정
+        uniqueConstraints = {
+                @UniqueConstraint(name = "UNIQUE_CUS_PHONE", columnNames = {"cusPhone"})
+        }
+)
+public class CustomerEntity {
+    @Id
     private String cusId; //거래처 아이디
     private String cusPwd; //거래처 비번
     private String cusName; //거래처 이름
@@ -20,7 +29,7 @@ public class CustomerDTO {
     private String contents;
     private Date sendDate;
     private int messageNo;
-    private String confirm;
+    private String conFirm;
 
 
 }
