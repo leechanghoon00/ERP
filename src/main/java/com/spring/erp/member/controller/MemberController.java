@@ -23,11 +23,6 @@ public class MemberController {
     }
 
 
-//    @GetMapping("/login") // 로그인 창 띄우기
-//    public String showLogin() {
-//        return "login"; // login.html을 반환
-//    }
-
 //    //회원 수정
 //    @PatchMapping("/editMember")
 //    public MemberEntity updateMember(MemberEntity MemberEntity) {
