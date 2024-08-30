@@ -16,7 +16,7 @@ public class MemberController {
     }
 
 
-    @PostMapping("/api/add")
+    @PostMapping("/api/add") //회원가입
     //TODO: Restful api 방식에대해서 공부가 필요 공부후 필요한 api로 적용 할것
     public void addMember(@RequestBody MemberDTO memberDTO) {
         memberService.addMember(memberDTO);
