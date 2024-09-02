@@ -10,7 +10,7 @@ import lombok.Setter;
 @Table(
         name = "member",  // 테이블 이름을 지정
         uniqueConstraints = {
-                @UniqueConstraint(name = "UNIQUE_co_PHONE", columnNames = {"coPhone"})
+                @UniqueConstraint(name = "UNIQUE_co_PHONE", columnNames = {"coPhone"}) //중복불가
         }
 )
 public class MemberEntity {
