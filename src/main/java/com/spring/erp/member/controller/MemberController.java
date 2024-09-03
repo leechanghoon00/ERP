@@ -26,20 +26,6 @@ public class MemberController {
     }
 
 
-    @PostMapping("/login")
-    public ModelAndView login(@RequestBody MemberDTO memberDTO) {
-        boolean isAuthenticated = memberService.login(memberDTO);
-
-        if (isAuthenticated) {
-            // 로그인 성공 시 성공 페이지로 리디렉트
-            return new ModelAndView("redirect:/main");
-        } else {
-            // 로그인 실패 시 에러 메시지를 모델에 추가하고 다시 로그인 페이지로 리디렉트
-            ModelAndView modelAndView = new ModelAndView(new RedirectView("/login"));
-            modelAndView.addObject("errorMessage", "로그인에 실패.");
-            return modelAndView;
-        }
-    }
 
 
 //    //회원 수정

@@ -47,17 +47,7 @@ public class MemberServiceImpl implements MemberService {
         memberRepository.save(memberEntity);
     }
 
-    @Override
-    public boolean login(MemberDTO memberDTO) {
-        // 사용자의 아이디로 사용자 엔티티 조회
-        MemberEntity memberEntity = memberRepository.findByCoId(memberDTO.getCoId());
 
-        if (memberEntity != null) {
-            // 입력된 비밀번호와 암호화된 비밀번호 비교
-            return passwordEncoder.matches(memberDTO.getCoPwd(), memberEntity.getCoPwd());
-        }
-        return false;
-    }
 
 
 }

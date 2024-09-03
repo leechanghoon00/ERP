@@ -27,7 +27,7 @@ public class    MemberDetailsService implements UserDetailsService {
                 //
 
         return User.builder() //시큐리티의 UserDetails 인터페이스를 구현한 클래스
-                .username(member.getCoUserNm()) // 사용자 이름 설정
+                .username(member.getCoId()) // 사용자 이름 설정
                 .password(member.getCoPwd()) // 암호화된 비밀번호 설정
                 .roles("USER") //권한 설정
                 .build(); //UserDetails 객체 생성
