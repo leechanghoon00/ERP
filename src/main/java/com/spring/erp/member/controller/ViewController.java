@@ -10,4 +10,9 @@ public class ViewController {
     public String login() {
         return "login"; // login.html을 반환합니다.
     }
+
+    @GetMapping("/main") //메인 창 띄우기
+    public String main() {
+        return "main"; // main.html을 반환합니다.
+    }
 }

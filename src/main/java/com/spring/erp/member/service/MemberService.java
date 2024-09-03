@@ -11,6 +11,9 @@ public interface MemberService {
     //회원 가입
     void addMember(MemberDTO memberDTO) ;
 
+    //로그인
+    boolean login(MemberDTO memberDTO);
+
     //todo : 회원 수정
 
 
