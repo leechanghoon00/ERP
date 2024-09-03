@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MemberRepository extends JpaRepository<MemberEntity, String> {
 
-    MemberEntity findByCoId(String coId);
 
 
 }
