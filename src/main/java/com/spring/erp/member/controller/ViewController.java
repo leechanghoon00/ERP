@@ -15,4 +15,6 @@ public class ViewController {
     public String main() {
         return "main"; // main.html을 반환합니다.
     }
+
+
 }

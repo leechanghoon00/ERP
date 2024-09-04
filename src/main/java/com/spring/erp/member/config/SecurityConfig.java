@@ -30,7 +30,7 @@ public class SecurityConfig {
         return http
                 // http요청에 대한 접근권한
                 .authorizeHttpRequests(authz -> authz // 요청에 대한 권한 설정
-                        .requestMatchers("/api/add", "/login").permitAll() //요청 모두 허용 인증없이 사용가능
+                            .requestMatchers("/api/add", "/login","/css/**","/static/**","/favicon","/error").permitAll() //요청 모두 허용 인증없이 사용가능
                         .anyRequest().authenticated() //나머지 경로는 인증요구
                 )
                 //폼 기반 로그인 설정 구성

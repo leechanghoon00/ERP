@@ -1,24 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>로그아웃</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-color: #f0f0f0;
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        .main {
-            font-size: 2em;
+
+        .container {
+            text-align: center;
+        }
+
+        .logout-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .logout-button:hover {
+            background-color: #c82333;
         }
     </style>
 </head>
 <body>
-<div class="main">main</div>
+<div class="container">
+    <h1>로그아웃</h1>
+    <p>현재 로그인한 사용자: <strong th:text="${username}">[사용자 이름]</strong></p>
+    <p>로그아웃 하시겠습니까?</p>
+    <form action="/logout" method="post">
+        <button type="submit" class="logout-button">로그아웃</button>
+    </form>
+</div>
 </body>
 </html>
